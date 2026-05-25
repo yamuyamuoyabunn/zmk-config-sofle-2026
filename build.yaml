@@ -175,25 +175,26 @@ include:
     snippet: rgb-config
     artifact-name: puchi_corne_right_oled_rgb
     ### Pro Micro END ###
-  ### CORNE END ###
-
-  ### SOFLEV2 SOFLEV1 SOFLEPLUS START ###
+### SOFLEV2 SOFLEV1 SOFLEPLUS START ###
   # nice!oled sofle
   - board: nice_nano_v2
     shield: sofle_left nice_oled
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Sofle_Oled\"  -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Sofle_Oled\"  -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=300000
     artifact-name: nice_sofle_left_oled
-    snippet: studio-rpc-usb-uart
+    snippet: studio-rpc-usb-uart rgb-config
+
   - board: nice_nano_v2
     shield: sofle_right nice_oled
-    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
+    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=300000
     artifact-name: nice_sofle_right_oled
+    snippet: studio-rpc-usb-uart rgb-config
 
-  # peripheral_left
+  # peripheral_left (もしこれも使うなら同様に修正)
   - board: nice_nano_v2
     shield: sofle_left_peripheral nice_oled
-    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
+    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=300000
     artifact-name: nice_sofle_left_peripheral_oled
+    snippet: studio-rpc-usb-uart rgb-config
 
   # Xiao_Dongle
   - board: seeeduino_xiao_ble
